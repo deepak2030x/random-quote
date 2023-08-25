@@ -21,10 +21,7 @@ function NewQuote() {
   useEffect(() => {
     fetch("https://api.api-ninjas.com/v1/quotes/", {
       headers: {
-        "X-Api-Key":
-          process.env.NODE_ENV === "production"
-            ? process.env.REACT_APP_QUOTE_API_KEY
-            : "BtGU0Clg9CG2VANFgpd+1A==YXF9MOr7qVHWFLVC",
+        "X-Api-Key": process.env.REACT_APP_QUOTE_API_KEY,
       },
     }).then((res) => {
       //   console.log(res);
